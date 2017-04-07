@@ -1,0 +1,49 @@
+<footer id="footerid" class="row" >
+    <div class="col-md-6">
+        <h2><a href="">FAQ</a></h2>
+    </div>
+    <div class="col-md-6">
+        <h2><a href="">Pricing</a></h2>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="../assets/justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<script src="../assets/colorbox/jquery.colorbox-min.js"></script>
+
+<!-- justifiedGallery/colorbox js code -->
+<script>
+    $('#mygallery').justifiedGallery({
+        lastRow : 'nojustify',
+        rowHeight : 150,
+        rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
+        margins : 1
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth : '80%',
+            maxHeight : '80%',
+            opacity : 0.8,
+            transition : 'elastic',
+            current : ''
+        });
+    });
+</script>
+
+<!-- scrollspy js code -->
+<script>
+    $(function() {
+        $('a[href*="/#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>

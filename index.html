@@ -1,0 +1,148 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+
+
+<body data-spy="scroll" data-target="#mainNav" class="container-fluid" >
+
+    {% include header.html %}
+
+    <section id="banner" class="fullSections row row-sm-flex-center">
+        <div class="col-lg-6">
+            <h1>Quickly learn the world’s most popular Ballroom and Social Dances!</h1>
+            <a href="#contact"><button type="button" class="btn btn-primary btn-lg">Sign Up</button></a>
+            <a href="#about"><button type="button" class="ghostBtn btn btn-secondary btn-lg">More</button></a>
+        </div>
+    </section>
+
+    <section id="about" class="fullSections">
+        <div class="row top-buffer">
+            <div class="col-md-6 offset-md-3 ">
+                <img class="profileImage" src="assets/photos/gina.jpg" />
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                <h4>
+                    Private Lessons scheduled at
+                    your convenience.
+                </h4>
+            </div>
+            <div class="col-md-6">
+                <h4>
+                    Group Lessons
+                    Mon-Wed 7-8 pm
+                </h4>
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                <h2>
+                    Weekly Dance Socials
+                </h2>
+                <p>
+                    <br>
+                    1st Visit is FREE<br>
+                    EVERY THURSDAY 7-8:30 pm<br>
+                    At the Amon G Carter YMCA<br>
+                    Includes Beginner Lesson, Intermediate Lesson, Social Dancing,
+                    and Occasional Demos and Adventures
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h2>
+                    About
+                </h2>
+                <p>
+                    <br>
+                    Welcome to Dance Express at the Downtown YMCA-your fast track towards making your dance dreams come true! Whether you are
+                    a beginner wanting to overcome two left feet, or if you’re ready for the next steps on your dance journey,
+                    professional Ballroom Dance Instructor, Gina Crisanti, is eager to help you achieve your goals through a
+                    comprehensive program of Private Lessons, Group Classes, Weekly Socials and Performance Opportunities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="photos" class="fullSections row">
+        <div class="col-12">
+            <h2>Photos</h2>
+            <div id="mygallery" >
+                    {% assign s = 'safdfasdf' %}
+                    {% assign i = 1 %}
+                    {% for image in site.static_files %}
+                        {% if image.path contains '/assets/images/' %}
+                            {% assign sPath = image.path | split: '/' %}
+                            {% if sPath[3] == s %}
+                                <a href=".{{ image.path }}" >
+                                    <img alt="{{sPath[3]}}" src=".{{ image.path }}" />
+                                </a>
+                                {% assign i = i | plus: 1 %}
+                            {% else %}
+                                {% assign s = sPath[3] %}
+                                {% assign i = 1 %}
+                                    <a href=".{{ image.path }}" >
+                                        <img alt="{{sPath[3]}}" src=".{{ image.path }}" />
+                                    </a>
+                                {% assign i = i | plus: 1 %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fullSections row row-sm-flex-center">
+        
+        <section class="contactBG col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Contact
+                </div>
+                <div class="card-block">
+                    <p class="card-text">
+                        <a href="https://goo.gl/maps/YY2ADAfPany">
+                            Amon G Carter YMCA<br>
+                            512 Lamar St, <br>
+                            Fort Worth, TX 76102, USA<br>
+                        </a>
+                        <br>
+                        <a href="tel:+18173323281">+1.8173323281</a><br>
+                        <a href="mailto:gcrisanti@ymcafw.org">gcrisanti@ymcafw.org</a><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="col-lg-4 hidden-md-down"></div>
+        <div class="contactBG col-md-6 col-lg-4 signUP">
+            <div class="card">
+                <div class="card-header">
+                    Sign Up Now!
+                </div>
+                <div class="card-block">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+
+html,body 
+{
+    height:100%;
+    margin:0;
+}
+body {
+    position: relative;
+}
+
+.fullSections
+{
+    height:100%;
+    min-height:100%;/*for mozilla*/
+    color: white;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+html>body .fullSections
+{
+    height:auto;
+}
+
+#banner
+{
+    margin: 0px -15px;
+    width: 100hv;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url(../assets/photos/bg9.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#about
+{
+    margin: 0px -15px;
+    width: 100hv;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url(../assets/photos/bg11.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#photos
+{
+    color: black;
+    text-align: center;
+}
+
+#photos h2
+{
+    margin-bottom: 50px;
+}
+
+#contact
+{
+    margin: 0px -15px;
+    width: 100hv;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url(../assets/photos/mapbg1.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.contactBG
+{
+    color: #000000;
+}
+
+
+
+#footerid
+{
+    margin: 0px -15px;
+    width: 100hv;
+    background-color: none;
+    background-image: none;
+    background-repeat: none;
+    background-attachment: none;
+    background-position: none;
+    height: 200px;
+    text-align: center;
+    padding: 75px;
+}
+
+
+.profileImage
+{
+    width: 60%;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 2px;
+    margin-bottom: 50px;
+}
+
+.customNav
+{
+    background-color: #000000;
+    opacity: .9;
+}
+
+.navbar-brand
+{
+    color: white !important;
+}
+
+.row-xs-flex-center {
+    display:flex;
+    align-items:center;
+}
+
+.ghostBtn{
+
+    background: transparent;
+    color: #F2F2F2;
+
+    /* CSS Transition */
+    -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+
+}
+
+.top-buffer
+{
+    margin-top: 50px;
+}
+
+@media ( min-width:768px ) {
+    .row-sm-flex-center {
+        display:flex;
+        align-items:center;
+    }
+}
+@media ( min-width: 992px ) {
+    .row-md-flex-center {
+        display:flex;
+        align-items:center;
+    }
+}
+@media ( min-width: 1200px ) {
+    .row-lg-flex-center {
+        display:flex;
+        align-items:center;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .signUP
+    {
+        margin-top: 50px;
+    }
+}
