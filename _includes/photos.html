@@ -1,0 +1,29 @@
+<div off-canvas="photos right push">
+    <section id="photos" class="row">
+        <div class="col-12">
+            <h2>Photos</h2>
+            <div id="mygallery" >
+                {% assign s = 'safdfasdf' %}
+                {% assign i = 1 %}
+                {% for image in site.static_files %}
+                {% if image.path contains '/assets/images/' %}
+                {% assign sPath = image.path | split: '/' %}
+                {% if sPath[3] == s %}
+                <a href=".{{ image.path }}" >
+                    <img alt="{{sPath[3]}}" src=".{{ image.path }}" />
+                </a>
+                {% assign i = i | plus: 1 %}
+                {% else %}
+                {% assign s = sPath[3] %}
+                {% assign i = 1 %}
+                <a href=".{{ image.path }}" >
+                    <img alt="{{sPath[3]}}" src=".{{ image.path }}" />
+                </a>
+                {% assign i = i | plus: 1 %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
