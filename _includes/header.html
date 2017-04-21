@@ -9,16 +9,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navigationBar">
             <ul class="nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/#about">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ page.url }}/#about">About <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item sidebarbutton">
                     <a class="nav-link sidebarbutton" onclick="openNav()" href="#">Photos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#contact">Contact</a>
+                    <a class="nav-link" href="{{ page.url }}/#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pricing.html">Pricing</a>
+                    <a class="nav-link" href="{{ page.url }}/pricing">Pricing</a>
                 </li>
             </ul>
         </div>
