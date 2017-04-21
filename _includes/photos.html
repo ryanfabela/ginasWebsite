@@ -9,15 +9,15 @@
                 {% if image.path contains '/assets/images/' %}
                 {% assign sPath = image.path | split: '/' %}
                 {% if sPath[3] == s %}
-                <a href=".{{ image.path }}" >
-                    <img alt="{{sPath[3]}}" src=".{{ image.path }}" />
+                <a href="{{ site.url }}{{ image.path }}" >
+                    <img alt="{{sPath[3]}}" src="{{ site.url }}{{ image.path }}" />
                 </a>
                 {% assign i = i | plus: 1 %}
                 {% else %}
                 {% assign s = sPath[3] %}
                 {% assign i = 1 %}
-                <a href=".{{ image.path }}" >
-                    <img alt="{{sPath[3]}}" src=".{{ image.path }}" />
+                <a href="{{ site.url }}{{ image.path }}" >
+                    <img alt="{{sPath[3]}}" src="{{ site.url }}{{ image.path }}" />
                 </a>
                 {% assign i = i | plus: 1 %}
                 {% endif %}
