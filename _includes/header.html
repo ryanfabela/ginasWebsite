@@ -1,26 +1,29 @@
-<header id="header">
+    {% if {{page.type}} == 'page' %}
+        {% assign prefix = site.url %}
+    {% else %}
+        {% assign prefix = '' %}
+    {% endif %}
     <nav id="mainNav" class="navbar nav-pills navbar-inverse bg-inverse navbar-toggleable-md fixed-top">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigationBar"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Express Dancing</a>
+        <a class="navbar-brand" href="{{ prefix }}#main">Express Dancing</a>
 
         <div class="collapse navbar-collapse justify-content-end" id="navigationBar">
-            <ul class="nav">
+            <ul id="#navList" class="nav navHighlighter">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/#about">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ prefix }}#about">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ prefix }}#contact">Contact</a>
                 </li>
                 <li class="nav-item sidebarbutton">
                     <a class="nav-link sidebarbutton" onclick="openNav()" href="#">Photos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pricing.html">Pricing</a>
+                    <a class="nav-link" href="{{ prefix }}pricing">Pricing</a>
                 </li>
             </ul>
         </div>
     </nav>
-</header>
