@@ -148,6 +148,11 @@ body {
 
 }
 
+.pricingButton
+{
+    margin-top: 20px;
+}
+
 .top-buffer
 {
     padding-top: 50px;
@@ -233,6 +238,8 @@ body {
 }
 
 
+
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -299,11 +306,5 @@ body {
     -moz-transform: scale(1.02);
     transition: all 300ms ease-in;
     transform: scale(1.02);
-}
-
-.nav-active
-{
-    color: white;
-    background-color: #0086B3;
 }
 
