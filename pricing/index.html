@@ -51,37 +51,40 @@ type: page
                                         </div>
                                     </div>
                                 </div>
+                                <a href="{{ prefix }}#banner"><button type="submit" class="btn btn-primary pricingButton">Sign Up</button></a>
                             </div>
                         </div>
-                        <div class="mainCard card card-pop">
-                            <h2 class="card-header">Group Lessons</h2>
-                            <div class="card-block">
-                                <h6 class="card-subtitle mb-2 text-muted">Monday, Tuesday, & Wednesday, 7-8:00 p.m.</h6>
-                                <div class="card-group">
-                                    <div class="card">
+                            <div class="card  card-pop">
+                                    <h2 class="card-header">Group Lessons</h2>
+                                    <div class="card-block">
+                                        <h6 class="card-subtitle mb-2 text-muted">Monday, Tuesday, & Wednesday, 7-8:00 p.m.</h6>
+                                        <div class="card-group">
+                                            <div class="card-group">
+                                                <div class="card">
 
-                                        <div class="card-block">
-                                            <h4 class="card-title">Monthly</h4>
+                                                    <div class="card-block">
+                                                        <h4 class="card-title">Monthly</h4>
 
-                                            Individual:<br>$30/member & $50/non-member<br><hr>
-                                            Couple:<br>$50/member & $70/non-member
+                                                        Individual:<br>$30/member & $50/non-member<br><hr>
+                                                        Couple:<br>$50/member & $70/non-member
 
 
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+
+                                                    <div class="card-block">
+                                                        <h4 class="card-title">Drop-In</h4>
+                                                        Individual:<br>$8/member & $12/non-member<br><hr>
+                                                        Couple:<br>$15/member & $22/non-member
+
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <a href="{{ prefix }}/#banner"><button type="submit" class="btn btn-primary pricingButton">Sign Up</button></a>
                                     </div>
-                                    <div class="card">
-
-                                        <div class="card-block">
-                                            <h4 class="card-title">Drop-In</h4>
-                                            Individual:<br>$8/member & $12/non-member<br><hr>
-                                            Couple:<br>$15/member & $22/non-member
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
-                        </div>
                     </div>
                 </section>
             </section>
@@ -103,7 +106,12 @@ type: page
 
 {% include footerIncludes.html %}
 
+<script>
+    $('.card').on('click', function(){
+        $(this).closest('.card').toggleClass('flipped');
 
+    });
+</script>
 
 </body>
 
