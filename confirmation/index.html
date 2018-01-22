@@ -1,0 +1,53 @@
+---
+type: page
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ginas Websites</title>
+    {% include head.html %}
+</head>
+
+
+<body data-spy="scroll" data-target="#mainNav">
+
+<div id="wrap">
+    <section id="main" class="container-fluid">
+        {% include header.html %}
+        <div class="row top-buffer">
+            <section class="offset-lg-1 col-lg-10 ">
+                <div class="text-center">
+                    <h1><br>We have recieved your information. Thank you</h1><hr>
+                    <br />
+                    <a href="/">Back to Home</a>
+                </div>
+            </section>
+
+        </div>
+
+    </section>
+</div>
+
+
+
+
+{% include footer.html %}
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    {% include photos.html %}
+</div>
+
+{% include footerIncludes.html %}
+
+<script>
+    $('.card').on('click', function(){
+        $(this).closest('.card').toggleClass('flipped');
+
+    });
+</script>
+
+</body>
+
+</html>
+
