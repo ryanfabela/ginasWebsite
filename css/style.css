@@ -1,115 +1,86 @@
-
-html,body 
-{
-    height:100%;
-    margin:0;
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
 body {
     position: relative;
 }
 
-#wrap
-{
+#wrap {
     min-height: 100%;
     height: auto;
     margin: 0 auto -150px;
     padding: 0 0 150px;
 }
 
-#canvasContainer
-{
+#canvasContainer {
     width: initial;
     margin: 0 -15px;
-
 }
 
-.fullSections
-{
-    height:100vh;
-    min-height:100%;/*for mozilla*/
+.fullSections {
+    height: 100vh;
+    min-height: 100%; /*for mozilla*/
     color: white;
     padding: 100px 50px;
     text-align: center;
 }
 
-
-.cardDark
-{
-    background-color: #2E2E2E;
+.cardDark {
+    background-color: #2e2e2e;
     color: white;
 }
-.cardDark hr
-{
+.cardDark hr {
     border-color: #ffffff;
 }
 
-.cardShadow
-{
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+.cardShadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-#banner
-{
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ), url(../assets/photos/bg9.jpg) no-repeat center center fixed;
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../assets/photos/main.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
-#about
-{
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ), url(../assets/photos/bg11.jpg) no-repeat center center fixed;
+#about {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../assets/photos/about.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
-#photos
-{
+#photos {
     background-color: #292b2c;
     color: #ffffff;
     text-align: center;
     padding: 10px 90px 50px 50px;
 }
 
-#photos h2
-{
+#photos h2 {
     margin-bottom: 50px;
 }
 
-#contact
-{
-
-
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ), url(../assets/photos/mapbg1.png) no-repeat center center fixed;
+#contact {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../assets/photos/mapbg1.png) no-repeat center center fixed;
     background-size: cover;
 }
 
-.contactBG
-{
+.contactBG {
     color: #000000;
 }
 
-
-
-#footerid
-{
-
-
+#footerid {
     background: #292b2c;
     height: 150px;
     text-align: center;
     padding: 60px;
 }
 
-
-.profileImage
-{
+.profileImage {
     width: 60%;
     border-radius: 50%;
     border-style: solid;
@@ -118,95 +89,78 @@ body {
     margin-bottom: 50px;
 }
 
-.customNav
-{
+.customNav {
     background-color: #000000;
-    opacity: .9;
+    opacity: 0.9;
 }
 
-.navbar-brand
-{
+.navbar-brand {
     color: white !important;
 }
 
 .row-xs-flex-center {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 }
 
-.ghostBtn{
-
+.ghostBtn {
     background: transparent;
-    color: #F2F2F2;
+    color: #f2f2f2;
 
     /* CSS Transition */
-    -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
-    -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
-    -ms-transition: background .2s ease-in-out, border .2s ease-in-out;
-    -o-transition: background .2s ease-in-out, border .2s ease-in-out;
-    transition: background .2s ease-in-out, border .2s ease-in-out;
-
+    -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
-.pricingButton
-{
+.pricingButton {
     margin-top: 20px;
 }
 
-.top-buffer
-{
+.top-buffer {
     padding-top: 50px;
     min-height: 70vh;
-
 }
 
-.hideScrollbars
-{
+.hideScrollbars {
     overflow: hidden;
 }
 
-
-
-
-@media ( min-width:768px ) {
+@media (min-width: 768px) {
     .row-sm-flex-center {
-        display:flex;
-        align-items:center;
+        display: flex;
+        align-items: center;
     }
 }
-@media ( min-width: 992px ) {
+@media (min-width: 992px) {
     .row-md-flex-center {
-        display:flex;
-        align-items:center;
+        display: flex;
+        align-items: center;
     }
 }
-@media ( min-width: 1200px ) {
+@media (min-width: 1200px) {
     .row-lg-flex-center {
-        display:flex;
-        align-items:center;
+        display: flex;
+        align-items: center;
     }
 }
 
-@media (max-width: 576px)
-{
-    .fullSections
-    {
+@media (max-width: 576px) {
+    .fullSections {
         height: 100%;
     }
 }
 
-@media (max-width: 992px)
-{
-    .signUP
-    {
+@media (max-width: 992px) {
+    .signUP {
         margin-top: 50px;
     }
-    .custom-responsive-width
-    {
+    .custom-responsive-width {
         width: 100%;
     }
 }
-
 
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -221,10 +175,9 @@ body {
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-
-
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
+.sidenav a:hover,
+.offcanvas a:focus {
     color: #f1f1f1;
 }
 
@@ -237,53 +190,53 @@ body {
     margin-left: 50px;
 }
 
-
-
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
-
 
 /* centered columns styles */
 .row-centered {
-    text-align:center;
+    text-align: center;
 }
 
-[class*="col-centered-"] {
+[class*='col-centered-'] {
     display: block;
-    float:none;
+    float: none;
     /* reset the text-align */
-    text-align:left;
+    text-align: left;
     /* inline-block space fix */
-    margin-right:-4px;
+    margin-right: -4px;
 }
 
 /* Default BS breakpoints */
 @media (min-width: 768px) {
     .col-centered-sm {
-        display: inline-block
+        display: inline-block;
     }
 }
 
 @media (min-width: 992px) {
     .col-centered-md {
-        display: inline-block
+        display: inline-block;
     }
 }
 
 @media (min-width: 1200px) {
     .col-centered-lg {
-        display: inline-block
+        display: inline-block;
     }
 }
 
-.card-pop
-{
+.card-pop {
     margin: 10px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
     -webkit-transform: scale(1);
     -ms-transition: all 200ms ease-in;
     -ms-transform: scale(1);
@@ -293,9 +246,7 @@ body {
     transform: scale(1);
 }
 
-
-.card-pop:hover
-{
+.card-pop:hover {
     box-shadow: 0px 0px 25px #000000;
     z-index: 2;
     -webkit-transition: all 300ms ease-in;
@@ -307,4 +258,3 @@ body {
     transition: all 300ms ease-in;
     transform: scale(1.02);
 }
-
